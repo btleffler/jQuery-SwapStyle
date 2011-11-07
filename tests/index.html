@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>jQuery.SwapStyle()</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script src="../jquery.swapstyle.min.js"></script>
+		<link rel="stylesheet" type="text/css" media="all" href="styles/three.css" />
+		<style type="text/css">
+			@import url(http://fonts.googleapis.com/css?family=Open+Sans|Oswald);
+			@import url(styles/one.css);
+		</style>
+	</head>
+	<body>
+		<h1>jQuery.SwapStyle()</h1>
+		<h2>Author: <a href="http://www.btleffler.com/" title="btleffler.com">Benjamin Leffler</a></h2>
+		<fieldset class="theForm">
+			<legend>Styled by link tag</legend>
+			<label>Swap outside style: </label>
+			<select id="outside">
+				<option value="styles/one.css" selected>First</option>
+				<option value="styles/two.css">Second</option>
+			</select><br />
+			<label>Swap inside style: </label>
+			<select id="inside">
+				<option value="styles/three.css" selected>Third</option>
+				<option value="styles/four.css">Fourth</option>
+			</select>
+		</fieldset><!--theForm-->
+		<script>
+			$(document).ready( function () {
+				var $outside	= $( "select#outside" ),	// Outside style selector
+					$inside		= $( "select#inside" ),	// Inside style selector
+					outCurr		= $outside.children( "option:selected" ).val(),
+					inCurr		= $inside.children( "option:selected" ).val();
+				
+				// The onChange handler will call jQuery.swapstyle()
+				$outside.change( function () {
+					// Get the new url from the user selection
+					var newStyleUrl = $outside.children( "option:selected" ).val();
+					
+					// Swap the style out
+					$.swapstyle( outCurr, newStyleUrl);
+					
+					// Save the new current style
+					outCurr = newStyleUrl;
+				});
+				
+				// Same as outside
+				$inside.change( function () {
+					var newStyleUrl = $inside.children( "option:selected" ).val();
+					
+					// jQuery.swapstyle will work with
+					// @import rules *AND* link tags.
+					$.swapstyle( inCurr, newStyleUrl );
+					
+					inCurr = newStyleUrl;
+				});
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+body {
+	background-color: #506077;
+	color: black;
+	margin: 75px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+	color: gray;
+	font-size: 2em;
+	margin: 0;
+}
+
+h2 {
+	margin: 0 0 0 25px;
+	color: #203044;
+	font-size: 1.5em;
+}
+
+h2 > a {
+	text-decoration: none;
+	color: #304055;
+}

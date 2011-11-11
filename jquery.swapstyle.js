@@ -1,4 +1,4 @@
-﻿/**
+/**
  * jQuery.SwapStyle: Swap Stylesheets
  * Author: Benjamin Leffler <btleffler@gmail.com>
  * Date: 09/14/11

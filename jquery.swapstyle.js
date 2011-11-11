@@ -8,13 +8,13 @@
     "use strict";
 
     $.swapstyle = function ( original, replacement ) {
-        var s,			// Sheet index
-            r,			// Rule index
-            thisSheet,	// Cache each sheet as we loop through
-            thisNode,	// Node for link tags
-            href,		// Cache the href
-            cssRules,	// So we can store where the browser stores import rules
-            rule;		// Cache the rule
+        var s,          // Sheet index
+            r,          // Rule index
+            thisSheet,  // Cache each sheet as we loop through
+            thisNode,   // Node for link tags
+            href,       // Cache the href
+            cssRules,   // So we can store where the browser stores import rules
+            rule;       // Cache the rule
 		
         // Loop through all the stylesheets
         for ( s = 0; s < document.styleSheets.length; s++ ) {

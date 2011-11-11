@@ -33,8 +33,8 @@
                         thisNode = thisSheet.owningElement;
                     }
 
-                    href = thisNode.href;
-                    thisNode.href =	href.replace( original, replacement );
+                    href            = thisNode.href;
+                    thisNode.href   = href.replace( original, replacement );
                     
                     // We've already replaced the stylesheet, so we
                     // shouldn't haveto check any of it's rules.

@@ -13,9 +13,9 @@
             thisSheet,  // Cache each sheet as we loop through
             thisNode,   // Node for link tags
             href,       // Cache the href
-            cssRules,   // So we can store where the browser stores import rules
+            cssRules,   // So we can have where the browser keeps import rules
             rule;       // Cache the rule
-		
+
         // Loop through all the stylesheets
         for ( s = 0; s < document.styleSheets.length; s++ ) {
             // The current stylesheet
@@ -24,7 +24,7 @@
             // If the href property isn't null, we should check the rule.
             if (    thisSheet.href !== null &&
                     typeof thisSheet.href !== "undefined"   ) {
-                if ( thisSheet.href.indexOf( original ) !== -1	) {				
+                if ( thisSheet.href.indexOf( original ) !== -1	) {
                     // Modify the link in question
                     thisNode = thisSheet.ownerNode;
 
@@ -35,7 +35,7 @@
 
                     href            = thisNode.href;
                     thisNode.href   = href.replace( original, replacement );
-                    
+
                     // We've already replaced the stylesheet, so we
                     // shouldn't haveto check any of it's rules.
                     continue;
@@ -56,7 +56,7 @@
                     // The current rule
                     rule = cssRules[ r ];
 
-                    /* 
+                    /*
                      * If the rule has an href, it's an @import! We
                      * should check the href. I tried using 'instanceof,'
                      * but Opera had no idea how to handle that
@@ -65,7 +65,7 @@
                             rule.href.indexOf(original) != -1   ) { */
 
                     if (    rule.href !== null &&
-							typeof rule.href !== "undefined"    ) {
+                            typeof rule.href !== "undefined"    ) {
                         if ( rule.href.indexOf( original ) !== -1 ) {
                             // Insert the new rule at the end
                             if ( thisSheet.insertRule ) {
@@ -75,7 +75,10 @@
                                 );
                             } else {
                                 // IE
-                                thisSheet.addImport( replacement, cssRules.length );
+                                thisSheet.addImport(
+                                    replacement,
+                                    cssRules.length
+                                );
                             }
 
                             // Delete the old one to get rid of clutter
@@ -85,7 +88,7 @@
                                 // IE
                                 thisSheet.removeImport( r );
                             }
-                        } // IF :rule.href.indexOf( original ) !== -1
+                        } // IF: rule.href.indexOf( original ) !== -1
                     } // IF: rule.href !== null && typeof rule.href !== "undefined"
                 } // FOR: r = 0; r < cssRules.length; r++
             } // IF: typeof cssRules !== "undefined"

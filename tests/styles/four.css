@@ -1,33 +1,33 @@
 .theForm {
-	border: 3px solid gray;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	-o-border-radius: 8px;
-	-ms-border-radius: 8px;
-	border-radius: 8px;
-	background-color: #888;
-	position: absolute;
-	bottom: 25px;
-	left: 25px;
-	color: white;
+    border: 3px solid gray;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -o-border-radius: 8px;
+    -ms-border-radius: 8px;
+    border-radius: 8px;
+    background-color: #888;
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    color: white;
 }
 
 .theForm > legend {
-	border: 3px solid gray;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	-o-border-radius: 8px;
-	-ms-border-radius: 8px;
-	border-radius: 8px;
-	-webkit-box-shadow: -2px 2px 1px black;
-	-mozilla-box-shadow: -2px 2px 1px black;
-	-o-box-shadow: -2px 2px 1px black;
-	-ms-box-shadow: -2px 2px 1px black;
-	box-shadow: -2px 2px 1px black;
-	background-color: #888;
-	color: white;
+    border: 3px solid gray;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -o-border-radius: 8px;
+    -ms-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: -2px 2px 1px black;
+    -mozilla-box-shadow: -2px 2px 1px black;
+    -o-box-shadow: -2px 2px 1px black;
+    -ms-box-shadow: -2px 2px 1px black;
+    box-shadow: -2px 2px 1px black;
+    background-color: #888;
+    color: white;
 }
 
 .theForm > label {
-	font-size: .8em;
+    font-size: .8em;
 }

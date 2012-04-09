@@ -7,41 +7,23 @@
 (function ($) {
     "use strict";
 
-<<<<<<< HEAD
-    $.swapstyle = function (original, replacement) {
+    $.swapstyle = function ( original, replacement ) {
         var s,         // Sheet index
             r,         // Rule index
             thisSheet, // Cache each sheet as we loop through
             thisNode,  // Node for link tags
             href,      // Cache the href
-            cssRules,  // So we can store where the browser stores import rules
+            cssRules,  // So we can have where the browser keeps import rules
             rule;      // Cache the rule
-		
-=======
-    $.swapstyle = function ( original, replacement ) {
-        var s,          // Sheet index
-            r,          // Rule index
-            thisSheet,  // Cache each sheet as we loop through
-            thisNode,   // Node for link tags
-            href,       // Cache the href
-            cssRules,   // So we can have where the browser keeps import rules
-            rule;       // Cache the rule
 
->>>>>>> 961ffce48706401208793f5fa288d2d6af2e7cae
         // Loop through all the stylesheets
         for (s = 0; s < document.styleSheets.length; s++) {
             // The current stylesheet
             thisSheet = document.styleSheets[s];
 
             // If the href property isn't null, we should check the rule.
-<<<<<<< HEAD
             if (thisSheet.href !== null && typeof thisSheet.href !== "undefined") {
                 if (thisSheet.href.indexOf(original) !== -1) {				
-=======
-            if (    thisSheet.href !== null &&
-                    typeof thisSheet.href !== "undefined"   ) {
-                if ( thisSheet.href.indexOf( original ) !== -1	) {
->>>>>>> 961ffce48706401208793f5fa288d2d6af2e7cae
                     // Modify the link in question
                     thisNode = thisSheet.ownerNode;
 
@@ -49,15 +31,9 @@
                         thisNode = thisSheet.owningElement; //IE
                     }
 
-<<<<<<< HEAD
                     href          = thisNode.href;
                     thisNode.href = href.replace(original, replacement);
-                    
-=======
-                    href            = thisNode.href;
-                    thisNode.href   = href.replace( original, replacement );
 
->>>>>>> 961ffce48706401208793f5fa288d2d6af2e7cae
                     // We've already replaced the stylesheet, so we
                     // shouldn't haveto check any of it's rules.
                     continue;
@@ -84,27 +60,14 @@
                      *
                     if (rule instanceof CSSImportRule && rule.href.indexOf(original) != -1) { */
 
-<<<<<<< HEAD
                     if (rule.href !== null && typeof rule.href !== "undefined") {
                         if (rule.href.indexOf(original) !== -1) {
-=======
-                    if (    rule.href !== null &&
-                            typeof rule.href !== "undefined"    ) {
-                        if ( rule.href.indexOf( original ) !== -1 ) {
->>>>>>> 961ffce48706401208793f5fa288d2d6af2e7cae
                             // Insert the new rule at the end
                             if (thisSheet.insertRule) {
                                 thisSheet.insertRule("@import url(" + replacement + ");", cssRules.length);
                             } else {
                                 // IE
-<<<<<<< HEAD
                                 thisSheet.addImport(replacement, cssRules.length);
-=======
-                                thisSheet.addImport(
-                                    replacement,
-                                    cssRules.length
-                                );
->>>>>>> 961ffce48706401208793f5fa288d2d6af2e7cae
                             }
 
                             // Delete the old one to get rid of clutter
@@ -120,8 +83,4 @@
             } // IF: typeof cssRules !== "undefined"
         } // FOR: s = 0; s < document.styleSheets.length; s++
     };
-<<<<<<< HEAD
 })(jQuery);
-=======
-} )( jQuery );
->>>>>>> 961ffce48706401208793f5fa288d2d6af2e7cae

@@ -1,13 +1,13 @@
 /**
  * jQuery.SwapStyle: Swap Stylesheets
  * Author: Benjamin Leffler <btleffler@gmail.com>
- * Date: 09/14/11
+ * Date: 03/17/14
  */
 
 (function ($) {
     "use strict";
 
-    $.swapstyle = function ( original, replacement ) {
+    $.swapstyle = function (original, replacement) {
         var s,         // Sheet index
             r,         // Rule index
             thisSheet, // Cache each sheet as we loop through
@@ -23,7 +23,7 @@
 
             // If the href property isn't null, we should check the rule.
             if (thisSheet.href !== null && typeof thisSheet.href !== "undefined") {
-                if (thisSheet.href.indexOf(original) !== -1) {				
+                if (thisSheet.href.indexOf(original) !== -1) {
                     // Modify the link in question
                     thisNode = thisSheet.ownerNode;
 
@@ -31,7 +31,7 @@
                         thisNode = thisSheet.owningElement; //IE
                     }
 
-                    href          = thisNode.href;
+                    href = thisNode.href;
                     thisNode.href = href.replace(original, replacement);
 
                     // We've already replaced the stylesheet, so we

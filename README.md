@@ -1,4 +1,4 @@
-# jQuery.SwapStyle
+# [jQuery.SwapStyle](http://btleffler.github.com/jQuery-SwapStyle/)
 
 Simple jQuery plugin that swaps out stylesheets.
 

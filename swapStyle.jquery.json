@@ -1,0 +1,31 @@
+{
+	"name": "swapStyle",
+	"version": "0.1.0",
+	"title": "jQuery Swap Style",
+	"author": {
+		"name": "Benjamin Leffler",
+		"email": "btleffler@gmail.com",
+		"url": "http://btleffler.com"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"URL": "http://opensource.org/licenses/MIT"
+		}
+	],
+	"dependencies": {
+		"jQuery": ">=1.6x <3"
+	},
+	"description": "Simple way to swap out CSS stylesheets using jQuery and the javascript CSS api.",
+	"keywords": [
+		"CSS",
+		"stylesheet",
+		"swap",
+		"theme",
+		"style"
+	],
+	"homepage": "http://btleffler.github.io/jQuery-SwapStyle/",
+	"docs": "https://github.com/btleffler/jQuery-SwapStyle/blob/master/README.md",
+	"demo": "http://btleffler.github.io/jQuery-SwapStyle/",
+	"bugs": "https://github.com/btleffler/jQuery-SwapStyle/issues"
+}

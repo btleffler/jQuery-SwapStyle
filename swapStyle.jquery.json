@@ -10,11 +10,11 @@
 	"licenses": [
 		{
 			"type": "MIT",
-			"URL": "http://opensource.org/licenses/MIT"
+			"url": "http://opensource.org/licenses/MIT"
 		}
 	],
 	"dependencies": {
-		"jQuery": ">=1.6x <3"
+		"jquery": ">=1.6x <3"
 	},
 	"description": "Simple way to swap out CSS stylesheets using jQuery and the javascript CSS api.",
 	"keywords": [

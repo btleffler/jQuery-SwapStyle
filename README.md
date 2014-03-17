@@ -19,11 +19,16 @@ Simple jQuery plugin that swaps out stylesheets.
 
 Using the plugin is very simple.
 
-    $.swapstyle( urlOfOriginal, urlOfReplacment );
+```js
+$.swapstyle( urlOfOriginal, urlOfReplacment );
+```
+
 
 A simple example would be:
 
-    $.swapstyle( "styles/one.css", "styles/two.css" );
+```js
+$.swapstyle( "styles/one.css", "styles/two.css" );
+```
 
 
 # LICENSE - MIT

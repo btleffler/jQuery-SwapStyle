@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<title>jQuery.SwapStyle()</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="jquery.swapstyle.min.js"></script>
 		<link rel="stylesheet" type="text/css" media="all" href="styles/three.css" />
 		<style type="text/css">
@@ -32,27 +32,27 @@
 					$inside		= $( "select#inside" ),	// Inside style selector
 					outCurr		= $outside.children( "option:selected" ).val(),
 					inCurr		= $inside.children( "option:selected" ).val();
-				
+
 				// The onChange handler will call jQuery.swapstyle()
 				$outside.change( function () {
 					// Get the new url from the user selection
 					var newStyleUrl = $outside.children( "option:selected" ).val();
-					
+
 					// Swap the style out
 					$.swapstyle( outCurr, newStyleUrl);
-					
+
 					// Save the new current style
 					outCurr = newStyleUrl;
 				});
-				
+
 				// Same as outside
 				$inside.change( function () {
 					var newStyleUrl = $inside.children( "option:selected" ).val();
-					
+
 					// jQuery.swapstyle will work with
 					// @import rules *AND* link tags.
 					$.swapstyle( inCurr, newStyleUrl );
-					
+
 					inCurr = newStyleUrl;
 				});
 			});

@@ -32,7 +32,7 @@ $.swapstyle( "styles/one.css", "styles/two.css" );
 
 
 # LICENSE - MIT
-Copyright (c) 2013 Benjamin Leffler
+Copyright (c) 2014 Benjamin Leffler
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
